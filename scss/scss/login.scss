@@ -1,0 +1,118 @@
+
+@import '_variables_menu';
+@import 'variables';
+@import 'mixins';
+
+.wp-core-ui {
+	.button-primary {
+		@include button( $button-color );
+	}
+}
+.login form{
+	background-color: transparent;
+	box-shadow: none;
+	padding: 12px;
+	.button{
+		width: 100%;
+		padding: 6px 10px !important;
+		height: auto !important;
+		line-height: 28px !important;
+		font-size: 16px;
+	}
+
+	p{
+		background-color: #fff;
+		border-radius: 0 0 3px 3px;
+		position: relative;
+		min-height: 44px;
+		&:first-child{
+			border-radius: 3px 3px 0 0;
+			margin-bottom: -1px !important;
+			.input{
+				border-radius: 3px 3px 0 0;
+			}
+		}
+
+		label{
+			padding: 12px 10px 8px 10px;
+			display: block;
+		}
+	}
+
+	.input{
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		border-radius: 0 0 3px 3px;
+		padding: 7px 8px;
+		background: transparent;
+		&:focus,
+		&:active,
+		&.active,
+		&.has-value{
+			background: #fff !important;
+			z-index: 1;
+		}
+	}
+
+	.forgetmenot,
+	.submit{
+		min-height: auto;
+		float: none;
+		padding-bottom: 10px;
+		background: transparent;
+	}
+	.forgetmenot label{
+		display: none;
+	}
+	&#lostpasswordform{
+		.button{
+			border-radius: 0 0 3px 3px;
+		}
+	}
+
+}
+.login{
+	#login_error, 
+	.message{
+		border-radius: 3px;
+		margin-bottom: 4px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	#nav{
+		text-align: center;
+		color: transparent;
+		a{
+			padding: 6px 10px;
+			border-radius: 3px;
+			color: #fff;
+			background: rgba(120,130,140,0.65);
+			&:first-child{
+				position: fixed;
+				top: 12px;
+				right: 10px;
+			}
+			&:last-child{
+				position: static;
+				background: rgba(120,130,140,0.25);
+			}
+			&:hover{
+				color: $link-focus;
+				background: #fff;
+			}
+			+ a{
+				margin-left: -6px;
+			}
+		}
+	} 
+	#backtoblog{
+		margin-top: 40px;
+		text-align: center;
+		a{
+			padding: 6px 10px;
+			border-radius: 3px;
+		}
+	}
+}

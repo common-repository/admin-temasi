@@ -1,0 +1,108 @@
+/* compiled by scssphp v0.0.10 on Fri, 05 Feb 2016 12:20:05 +0100 (0.0652s) */
+
+/*
+ * Button mixin- creates 3d-ish button effect with correct
+ * highlights/shadows, based on a base color.
+ */
+.wp-core-ui .button-primary {
+  background: #3cc5f1;
+  border-color: #3cc5f1;
+  color: white;
+  box-shadow: none;
+  text-shadow: none; }
+  .wp-core-ui .button-primary:hover, .wp-core-ui .button-primary:focus {
+    background: #4ac9f2;
+    border-color: #4ac9f2;
+    color: white;
+    box-shadow: none; }
+  .wp-core-ui .button-primary:focus {
+    box-shadow: none; }
+  .wp-core-ui .button-primary:active {
+    background: #11b5e9;
+    border-color: #0fa2d1;
+    box-shadow: inset 0 2px 0 #0fa2d1; }
+  .wp-core-ui .button-primary[disabled], .wp-core-ui .button-primary:disabled, .wp-core-ui .button-primary.button-primary-disabled, .wp-core-ui .button-primary.disabled {
+    color: #c7cfd1 !important;
+    background: #16baee !important;
+    border-color: #0fa2d1 !important;
+    text-shadow: none !important; }
+  .wp-core-ui .button-primary.button-hero {
+    box-shadow: none !important; }
+    .wp-core-ui .button-primary.button-hero:active {
+      box-shadow: none; }
+
+.login form {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 12px; }
+  .login form .button {
+    width: 100%;
+    padding: 6px 10px !important;
+    height: auto !important;
+    line-height: 28px !important;
+    font-size: 16px; }
+  .login form p {
+    background-color: #fff;
+    border-radius: 0 0 3px 3px;
+    position: relative;
+    min-height: 44px; }
+  .login form p:first-child {
+    border-radius: 3px 3px 0 0;
+    margin-bottom: -1px !important; }
+    .login form p:first-child .input {
+      border-radius: 3px 3px 0 0; }
+  .login form p label {
+    padding: 12px 10px 8px 10px;
+    display: block; }
+  .login form .input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0 0 3px 3px;
+    padding: 7px 8px;
+    background: transparent; }
+  .login form .input:focus, .login form .input:active, .login form .input.active, .login form .input.has-value {
+    background: #fff !important;
+    z-index: 1; }
+  .login form .forgetmenot, .login form .submit {
+    min-height: auto;
+    float: none;
+    padding-bottom: 10px;
+    background: transparent; }
+  .login form .forgetmenot label {
+    display: none; }
+  .login form#lostpasswordform .button {
+    border-radius: 0 0 3px 3px; }
+
+.login #login_error, .login .message {
+  border-radius: 3px;
+  margin-bottom: 4px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .login #nav {
+    text-align: center;
+    color: transparent; }
+  .login #nav a {
+    padding: 6px 10px;
+    border-radius: 3px;
+    color: #fff;
+    background: rgba(120, 130, 140, 0.65); }
+    .login #nav a:first-child {
+      position: fixed;
+      top: 12px;
+      right: 10px; }
+    .login #nav a:last-child {
+      position: static;
+      background: rgba(120, 130, 140, 0.25); }
+    .login #nav a:hover {
+      color: #0099d5;
+      background: #fff; }
+    .login #nav a + a {
+      margin-left: -6px; }
+  .login #backtoblog {
+    margin-top: 40px;
+    text-align: center; }
+  .login #backtoblog a {
+    padding: 6px 10px;
+    border-radius: 3px; }

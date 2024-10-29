@@ -1,0 +1,18 @@
+$text-color: #777777;
+$base-color: #222222;
+$highlight-color: #c62727;
+$notification-color: #c62727;
+
+$menu-text: $text-color;
+$menu-icon: $menu-text;
+$menu-background: $base-color;
+
+$menu-highlight-text: #fff;
+$menu-highlight-icon: $menu-highlight-text;
+$menu-highlight-background: $highlight-color;
+
+$menu-submenu-text: $text-color;
+$menu-submenu-focus-text: #fff;
+$menu-submenu-current-text: $menu-submenu-focus-text;
+
+$menu-bubble-text: #fff;

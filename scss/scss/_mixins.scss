@@ -1,0 +1,47 @@
+/*
+ * Button mixin- creates 3d-ish button effect with correct
+ * highlights/shadows, based on a base color.
+ */
+@mixin button( $button-color, $text-color: white ) {
+	background: $button-color;
+	border-color: $button-color;
+	color: $text-color;
+	box-shadow: none;
+	text-shadow: none;
+
+	&:hover,
+	&:focus {
+		background: lighten( $button-color, 3% );
+		border-color: lighten( $button-color, 3% );
+		color: $text-color;
+		box-shadow: none;
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	&:active {
+		background: darken( $button-color, 10% );
+		border-color: darken( $button-color, 15% );
+	 	box-shadow: inset 0 2px 0 darken( $button-color, 15% );
+	}
+
+	&[disabled],
+	&:disabled,
+	&.button-primary-disabled,
+	&.disabled {
+		color: hsl( hue( $button-color ), 10%, 80% ) !important;
+		background: darken( $button-color, 8% ) !important;
+		border-color: darken( $button-color, 15% ) !important;
+		text-shadow: none !important;
+	}
+
+	&.button-hero {
+		box-shadow: none !important;
+		&:active {
+		 	box-shadow: none;
+		}
+	}
+
+}
